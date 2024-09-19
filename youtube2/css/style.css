@@ -1,0 +1,350 @@
+* {
+    box-sizing: border-box;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-decoration: none;       /* Elimina el subrayado del enlace */
+    display: flex;
+}
+
+.vacio{
+    height: 30vh /* usamos vh que significa viewport height osea que de todo lo que se ve en la pantalla en este caso es el 30% creo... xd */
+}
+
+.caja1 {
+    height: 100vh;
+    background-color: #350c0c;
+    border: solid 2px #ffffff;
+    display: flex;
+    flex-direction: column; /*bueno eso es pa que se distribuya en columnas, podriamos usar row pero no me salian las cajas como debian */
+    margin-top: 7vh;
+}
+
+.caja2 {
+    height: 15vh;
+    background-color: #120612;
+    border: solid 2px #ffffff;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.caja3,.perfil_lado_texto {
+    height: 5vh;
+    background-color: #4d0606;
+    border: solid 2px #ffffff;
+    display: flex;               /* Usar flexbox para alinear el contenido */
+    align-items: center;         /* Centrar el contenido verticalmente */
+    justify-content: flex-start; /* Alinea el contenido al inicio (izquierda) */
+    padding-left: 1vw;          /* Espacio a la izquierda del texto */
+    transition: background-color 0.3s; /* animacion de transicion de color y su tiempo */
+    cursor: pointer; /* pa que aparezca la manita cuando pongas el cursor encima de la caja */
+    font-size: 1.5em;
+}
+
+.caja3 a {
+    color: white;          
+    display: block; /*hace que en este caso el a ocupe todo el espacio de la caja entonces podemos dar click en todo y no solo el texto*/
+    text-decoration: none;
+}
+
+.perfil_lado_texto a {
+    color: white;          
+    display: block; 
+    text-decoration: none;
+}
+
+.perfil_lado_texto:hover {
+    background-color: #A040A0;
+}
+
+.caja3:hover {
+    background-color: #A040A0;
+}
+
+.perfil {
+    height: 5vh;
+    background-color: #000000;
+    border: solid 2px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que se reduzca en tamaño */
+}
+
+
+.perfil_redon {
+    height: 5vh;
+    width: 5vh; /* aqui nose el porque pero funciono poner mejor el vh en vez de vw */
+    background-color: #c0faff;
+    border: solid 2px #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.perfil_redon:hover {
+    background-color: #fcedfc;
+}
+
+.perfil_publicacion{
+    margin-left: 0.2vw;
+}
+
+footer {
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+
+
+
+.historias {
+    height: 100vh;
+    background-color: #BC5DC1;
+    border: solid 2px #ffffff;
+    display: flex;
+    flex-wrap: wrap;  /* Permite que los elementos se envuelvan a la siguiente línea */
+    align-content: flex-start;  /* Alinea las filas al inicio del contenedor */
+}
+
+.historias_cajas {
+    background-color: #A040A0;
+    border: solid 2px #ffffff;
+    height: 15vh;
+    align-items: center; 
+    justify-content: center;
+    display: flex;
+    flex: 1 0 15%; /* Permite que las cajas se adapten al tamaño del contenedor */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
+    margin: 5px; /* Espaciado entre las cajas */
+}
+
+
+.relleno{
+    width: 2vw;
+    height: 100h;
+    background: #000000;
+    display: flex;
+    border: solid 2px #ffffff;
+}
+
+.lado1{
+    height: 100vh;
+    background-color: #230425;
+    border: solid 2px #ffffff;
+    display: flex;
+}
+
+.lado2{
+    display: flex;
+    flex-direction: column; 
+}
+
+.circulito {
+    height: 10vh;
+    width: 10vh; /* aqui nose el porque pero funciono poner mejor el vh en vez de vw */
+    background-color: #c0faff;
+    border: solid 2px #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.circulito {
+    background-color: #fcedfc;
+}
+
+.publicacion {
+    background-color: #421045; /* Fondo de la publicación */
+    margin-left: 13vh;
+    border: solid 2px #ffffff; /* Borde de la publicación */
+    padding: 10px;
+    margin-top: 20px; /* Espacio entre las historias y la publicación */
+}
+
+.imagen_publicacion img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: solid 2px #ffffff; /* Borde de la imagen */
+}
+
+.descripcion {
+    background-color: #A040A0;
+    border: solid 2px #ffffff; 
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.comentarios {
+    margin-top: 10px;
+}
+
+.comentarios input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 2px #ffffff;
+    background-color: #230425;
+    color: white;
+}
+
+.comentarios button {
+    background-color: #520011;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comentarios button:hover {
+    background-color: #77121b;
+}
+
+.comentario-texto {
+    background-color: #230425;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: solid 2px #ffffff;
+}
+
+
+.cntvideos{
+    background-color: rgb(106, 189, 240);
+    width: 486px;
+    height: 252px;
+    border: solid 2px #ffffff;
+    margin-left: 1%;
+    margin-top: 4vh;
+    margin-right: 1vw;
+    border-radius: 12px; /* Bordes redondeados */
+    flex-direction: row-reverse;
+}
+
+.portada{
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupará el 100% de la altura del contenedor */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción y cubra todo el contenedor */
+    border-radius: 12px; /* Mantén el borde redondeado si es necesario */
+}
+
+.descripcion-video {
+    background-color: #230425;
+    color: white; /* Texto en blanco */
+    padding: 10px; /* Espaciado interior */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 10px; /* Separación con el video */
+    border: solid 2px #ffffff; /* Borde blanco */
+}
+
+.descripcion-video h5 {
+    margin: 0; /* Quita márgenes para que esté más compacto */
+    font-size: 1.2em; /* Tamaño del título */
+}
+
+.descripcion-video p {
+    margin: 5px 0 0; /* Espacio entre el título y la descripción */
+    font-size: 0.9em; /* Tamaño del texto */
+}
+
+.principal{
+    height: 60vh;
+    background-color: white;
+    color: white;
+    text-decoration: none;       /* Elimina el subrayado del enlace */
+    display: flex;
+    margin-left: 16.5vw; /* margen o espaciado en tre cajas en este caso lo pusimos porque al parecer como esta fixed
+    el aside aparece encima entonces una solucion algo chambona jajajaj, fue colocarle un margin para que se moviera a la zona
+    visible, ademas el vw significa viewport width o el ancho de pantalla supongo */
+    margin-top: 8vh;
+}
+
+.principal2{
+    height: 60vh;
+    background-color: white ;
+    color: white;
+    text-decoration: none;       /* Elimina el subrayado del enlace */
+    display: flex;
+    margin-left: 16.5vw; /* margen o espaciado en tre cajas en este caso lo pusimos porque al parecer como esta fixed
+    el aside aparece encima entonces una solucion algo chambona jajajaj, fue colocarle un margin para que se moviera a la zona
+    visible, ademas el vw significa viewport width o el ancho de pantalla supongo */
+    margin-top: 0vh;
+}
+
+main {
+    overflow: auto;
+    height: 100vh; /* O el tamaño que prefieras */
+}
+
+
+/* Ocultar en 1783 y tamaños menores */
+@media (max-width: 1783px) {
+    .ocultar_1 {    
+        display: none;
+    }
+}
+/* Ocultar en 1263 y tamaños menores */
+@media (max-width: 1263px) {
+    .ocultar_2 {    
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 1263px) {
+    aside {
+        width: 100%;
+    }
+    .caja1{
+        width: 5vh;
+    }
+
+    .caja1, .caja2, .perfil {
+        margin-bottom: 10px; /* Espacio entre las cajas abajo*/
+    }
+
+    .perfil {
+        width: 100vw;
+    }
+
+    .publicacion .perfil {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .perfil_redon{
+        height: 4vh;
+        width: 4vh;
+    }
+
+    .principal{
+        margin: 0vw;
+        width: 100%;
+    }
+    .principal2{
+        margin-left: 0vw;
+        width: 100%;
+    }
+
+    .cntvideos{
+        margin-left: 8vh;
+        margin-right: 4vh;
+    }
+}
+
+
